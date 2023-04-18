@@ -2,9 +2,10 @@
 
 namespace Animal.Models
 {
-    public class Dragon : AnimalMooveSleep, Pilotage 
+    public class Dragon : Animal, Pilotage 
     {
-        public Dragon() { }
+        public Dragon(int id, string name, string rarity) : base(id, name, rarity)
+        { }
 
         public void drive()
         {
@@ -19,6 +20,11 @@ namespace Animal.Models
         public new void sleep(string name)
         {
             Console.WriteLine($"{name} dort ! (fonction new Dragon)");
+        }
+
+        public new void printIdAndNameAndRarity(int id, string name, string rarity)
+        {
+            Console.WriteLine($"l'id {id} a pour nom {name} et est de rareté {rarity}");
         }
     }
 }
