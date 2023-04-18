@@ -19,6 +19,10 @@ class Program
         Vehicule vehicule = new();
         vehicule.move("Voiture");
 
+        Chiens chiens= new();
+        string[]listChiens = { "Snow", "Thomas Caron", "Thomas Boucry", "Camille", "Samuel", "Noé", "Dylan" };
+        chiens.printChiens(listChiens);
+
         Console.ReadLine();
     }
 }
