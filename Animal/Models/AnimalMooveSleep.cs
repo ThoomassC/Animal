@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Animal.AnimalClasses
+namespace Animal.Models
 {
-    public class AnimalMooveSleep
+    public abstract class AnimalMooveSleep
     {
         public AnimalMooveSleep() { }
 
-        public string name { get; set; }
+        public string name { get; private set; }
 
-        public void Moove(string name)
+        public virtual void Move(string name)
         {
             Console.WriteLine($"{name} bouge !");
         }
 
-        public void Sleep(string name)
+        public virtual void Sleep(string name)
         {
             Console.WriteLine($"{name} dort !");
         }

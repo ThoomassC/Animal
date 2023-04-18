@@ -1,5 +1,5 @@
 ﻿using System.Text;
-using Animal.AnimalClasses;
+using Animal.Models;
 
 class Program
 {
@@ -7,10 +7,14 @@ class Program
     {
         Console.OutputEncoding = Encoding.UTF8;
 
-        AnimalMooveSleep animal = new();
+        Griffin griffin= new();
+        griffin.Move("Griffin");
+        griffin.Sleep("Griffin");
 
-        animal.Moove("Chien");
-        animal.Sleep("Chien");
+        Dragon dragon = new();
+        dragon.Move("Dragon");
+        dragon.Sleep("Dragon");
+
         Console.ReadLine();
     }
 }
