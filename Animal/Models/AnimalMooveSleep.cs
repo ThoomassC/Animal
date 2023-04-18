@@ -10,14 +10,14 @@ namespace Animal.Models
     {
         public AnimalMooveSleep() { }
 
-        public string name { get; private set; }
+        public string name { get; protected set; }
 
-        public virtual void Move(string name)
+        public virtual void move(string name)
         {
             Console.WriteLine($"{name} bouge !");
         }
 
-        public virtual void Sleep(string name)
+        public virtual void sleep(string name)
         {
             Console.WriteLine($"{name} dort !");
         }

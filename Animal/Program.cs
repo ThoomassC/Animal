@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using Animal.Models;
+using Animal.Interface;
 
 class Program
 {
@@ -8,12 +9,15 @@ class Program
         Console.OutputEncoding = Encoding.UTF8;
 
         Griffin griffin= new();
-        griffin.Move("Griffin");
-        griffin.Sleep("Griffin");
+        griffin.move("Griffin");
+        griffin.sleep("Griffin");
 
         Dragon dragon = new();
-        dragon.Move("Dragon");
-        dragon.Sleep("Dragon");
+        dragon.move("Dragon");
+        dragon.sleep("Dragon");
+
+        Vehicule vehicule = new();
+        vehicule.move("Voiture");
 
         Console.ReadLine();
     }

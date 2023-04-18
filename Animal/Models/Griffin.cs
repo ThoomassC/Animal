@@ -4,12 +4,12 @@
     {
         public Griffin() { }
 
-        public override void Move(string name)
+        public override void move(string name)
         {
             Console.WriteLine($"{name} bouge ! (fonction override Griffin)");
         }
 
-        public new void Sleep(string name)
+        public new void sleep(string name)
         {
             Console.WriteLine($"{name} dort ! (fonction new Griffin)");
         }
