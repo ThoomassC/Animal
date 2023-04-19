@@ -2,7 +2,7 @@
 
 namespace Animal.Models
 {
-    public class Dragon : Animal, Pilotage 
+    public class Dragon : Animal, Pilotage, IFly
     {
         public Dragon(int id, string name, string rarity) : base(id, name, rarity)
         { }
@@ -25,6 +25,11 @@ namespace Animal.Models
         public new void printIdAndNameAndRarity(int id, string name, string rarity)
         {
             Console.WriteLine($"l'id {id} a pour nom {name} et est de rareté {rarity}");
+        }
+
+        public void fly()
+        {
+            Console.WriteLine($"Dragon {Name} est en train de voler !");
         }
     }
 }

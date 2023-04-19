@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using Animal.Interface;
 using Animal.Models;
 
 class Program
@@ -41,6 +42,16 @@ class Program
         Chiens chiens= new();
         string[]listChiens = { "Snow", "Thomas Caron", "Thomas Boucry", "Camille", "Samuel", "Noé", "Dylan" };
         chiens.printChiens(listChiens);
+
+        //IList<Dragon> dragons = new List<Dragon>
+        IFly dragon = new Dragon(20, "Nicoulah", "Unique");
+        dragon.fly();
+
+        IFly bird = new Bird(20, "oiseau", "Unique");
+        bird.fly();
+
+        IFly aigle = new Aigle(20, "aigle", "Unique");
+        aigle.fly();
 
         Console.ReadLine();
     }
