@@ -63,7 +63,7 @@ class Program
 
         Console.Write("Entrez le type de l'animal : ");
         string type = Console.ReadLine();
-        string verifiedType = (Dragon)type;
+        //string verifiedType = (Dragon)type;
 
         BDD bdd = new BDD(name, rarity, type);
         bdd.ConnectionDataBase();
