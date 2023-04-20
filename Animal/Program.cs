@@ -16,7 +16,7 @@ class Program
         dragon.move("Dragon");
         dragon.sleep("Dragon");*/
 
-        var a = new Dragon(1, "Thomas Caron", "Legendaire");
+        /*var a = new Dragon(1, "Thomas Caron", "Legendaire");
 
         IList<Dragon> animals = new List<Dragon>
         {
@@ -25,19 +25,19 @@ class Program
          
         //var execption = animals.Where(value => value.Rarity == "rare");
         //var queryAnimal = from animal in animals where animal.Rarity == "rare" select animal;
-        /*foreach (var animal in queryAnimal)
+        *//*foreach (var animal in queryAnimal)
         {
             animal.printIdAndNameAndRarity(animal.Id, animal.Name, animal.Rarity);
-        }*/
+        }*//*
             //foreach (var animal in execption) { animal.printIdAndNameAndRarity(animal.Id, animal.Name, animal.Rarity); }
             // foreach(var animal in animals) { animal.printIdAndNameAndRarity(animal.Id, animal.Name, animal.Rarity); }
 
-            /*animal.printIdAndNameAndRarity(1, "Thomas Boucry", "commun");
+            *//*animal.printIdAndNameAndRarity(1, "Thomas Boucry", "commun");
             animal.printIdAndNameAndRarity(1, "Thomas Caron", "epique");
             animal.printIdAndNameAndRarity(1, "Samuel", "rare");*/
 
             /*Vehicule vehicule = new();
-            vehicule.move("Voiture");*/
+            vehicule.move("Voiture");*//*
 
         Chiens chiens= new();
         string[]listChiens = { "Snow", "Thomas Caron", "Thomas Boucry", "Camille", "Samuel", "Noé", "Dylan" };
@@ -51,7 +51,22 @@ class Program
         bird.fly();
 
         IFly aigle = new Aigle(20, "aigle", "Unique");
-        aigle.fly();
+        aigle.fly();*/
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+        Console.Write("Entrez le nom de l'animal : ");
+        string name = Console.ReadLine();
+
+        Console.Write("Entrez la rareté de l'animal : ");
+        string rarity = Console.ReadLine();
+
+        Console.Write("Entrez le type de l'animal : ");
+        string type = Console.ReadLine();
+        string verifiedType = (Dragon)type;
+
+        BDD bdd = new BDD(name, rarity, type);
+        bdd.ConnectionDataBase();
 
         Console.ReadLine();
     }
